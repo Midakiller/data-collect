@@ -4,7 +4,7 @@ name: Collecte parkings temps réel
 on:
   schedule:
     # Exécute toutes les heures (tu peux changer la fréquence)
-    - cron: '0 * * * *'
+    - cron: '*/15 * * * *'
   workflow_dispatch: # permet de lancer manuellement depuis GitHub
 
 jobs:
