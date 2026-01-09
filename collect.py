@@ -1,12 +1,12 @@
 # collect.py
 import csv
 import os  # Nécessaire pour vérifier si le fichier existe
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from api_utils import get_parkings_voiture, get_parkings_velo
 
 def collect_data():
-    date = datetime.now().isoformat()
-
+    tz_gmt1 = timezone(timedelta(hours=1))
+    date = datetime.now(tz_gmt1).strftime('%Y-%m-%d %H:%M:%S')
     # --- Collecte VOITURES ---
     csv_voiture = "parkings_voiture.csv"
     try:
