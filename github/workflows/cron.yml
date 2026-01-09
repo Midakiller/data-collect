@@ -1,4 +1,4 @@
-# .github/workflows/collect.yml
+# .github/workflows/cron.yml
 name: Collecte parkings temps réel
 
 on:
